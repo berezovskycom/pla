@@ -37,3 +37,4 @@ Nice and clean boilerplate to work with react, redux, jest
 4. npm start (to start webpack dev-server)
 
 "# playlists" 
+"# playlists-crud" 
