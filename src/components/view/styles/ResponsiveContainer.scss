@@ -1,0 +1,25 @@
+.custom-container {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+	.custom-container {
+		background-color: #f5f5f5;
+		margin: 10px auto;
+	}
+
+	.custom-container > div {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	}	
+
+	.strong-text {
+		font-weight: bold;
+	}
+
+	.container-header {
+		display: none;
+	}
+}
