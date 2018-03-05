@@ -58,14 +58,14 @@ class Song extends Component {
 					/>}
 				</Medium3>
 
-				<Medium3>{editIsNotClicked ? 
+				<Medium2>{editIsNotClicked ? 
 					this.props.song : 
 					<input 
 						type="text" 
 						placeholder="Song title"
 						ref={(input) => {this.song = input}}
 					/>}
-				</Medium3>
+				</Medium2>
 
 				<Medium2>{editIsNotClicked ? 
 					this.props.genre : 
@@ -106,6 +106,5 @@ class Song extends Component {
 		)
 	}
 }
-
 
 export default Song;

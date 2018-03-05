@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { YOU_TUBE_LINK, SOUND_CLOUD_LINK } from '../constants';
 import { addToList } from '../actions';
-import Song from './Song';
+import store from '../store';
+import { v4 } from 'uuid';
+
+import PlaylistHeader from './PlaylistHeader';
 import Title from './Title';
-import TableHead from './TableHead';
+import Song from './Song';
+
 import { 
 	ResponsiveContainer,
 	Medium3,
 	Medium2,
 	Medium1 
 } from './view/Layout';
-import store from '../store';
-import { v4 } from 'uuid';
 
 class Playlist extends Component {
 	constructor(props) {
@@ -57,7 +59,7 @@ class Playlist extends Component {
 			<div className="container container-fluid">
 				<Title text="My playlist"/>
 				<div>
-					<TableHead/>
+					<PlaylistHeader/>
 						{this.props.data.byId.map((item) => {	
 							const {artist, song, genre} = this.props.data.byHash[item].content;
 							return <Song
@@ -73,20 +75,32 @@ class Playlist extends Component {
 						{
 							this.state.addNewSong ? 
 							<ResponsiveContainer>
-								<Medium3>
+								<Medium2>
 									<input 
 										type="text" 
+										placeholder="Artist"
 										ref={(input) => {this.newArtist = input}}
 									/>
-								</Medium3>
-								<Medium3>
+								</Medium2>
+								<Medium2>	
 									<input 
-										type="text" 
+										type="text"
+										placeholder="Song title" 
 										ref={(input) => {this.newSong = input}}
 									/>
-								</Medium3>
-								<div className="col-md-2 col-sm-2"><input type="text" ref={(input) => {this.newGenre = input}}/></div>
-								<div className="col-md-1 col-sm-1"><button onClick={this.addSong}>Add</button></div>
+								</Medium2>	
+								<Medium2>
+									<input 
+										type="text" 
+										placeholder="Genre"
+										ref={(input) => {this.newGenre = input}}
+									/>
+								</Medium2>
+								<Medium1>
+									<button onClick={this.addSong}>
+										Add
+									</button>
+								</Medium1>
 							</ResponsiveContainer> : null
 						}
 						<ResponsiveContainer className="center-block">

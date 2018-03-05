@@ -4,9 +4,7 @@ import Playlist from './Playlist';
 
 const App = () => (
 	<div>
-		<div className="main">
-			<Playlist/>
-		</div>
+		<Playlist/>
 	</div>
 )
 
