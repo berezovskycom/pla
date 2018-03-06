@@ -1,46 +1,6 @@
 import redux from 'redux';
 import { ADD_TO_LIST, UPDATE_LIST, DELETE_LIST, DELETE_ALL } from '../constants';
-
-const initialState = {
-	byId: [0,1,2],
-	byHash: {
-		0: {
-			id: 0,
-			content: {
-				artist: 'Lorde',
-				song: 'Melodrama',
-				genre: 'Pop',
-				videoLink: '',
-				musicLink: ''
-			}
-		},
-		1: {
-			id: 1,
-			content: {
-				artist: 'Bobby S',
-				song: 'Worldwide',
-				genre: 'Hip-hop',
-				videoLink: '',
-				musicLink: ''
-			}
-		},
-		2: {
-			id: 2,
-			content: {
-				artist: 'Greaf',
-				song: 'Macintosch',
-				genre: 'Ambient',
-				videoLink: '',
-				musicLink: ''				
-			}
-		}
-	}
-}
-
-// const initialState = {
-// 	byId: [],
-// 	byHash: {}
-// }
+import initialState from './initialState';
 
 const reducer = (state = initialState, action) => {
 	const { type, id, payload } = action;

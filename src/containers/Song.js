@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import store from '../store';
 import { updateList, deleteList } from '../actions';
 import {
@@ -7,7 +8,7 @@ import {
 	Medium3, 
 	ResponsiveContainer,
 	StrongText
-} from './view/Layout';
+} from '../components/view/Layout';
 
 class Song extends Component {
 	constructor(props) {
@@ -77,11 +78,11 @@ class Song extends Component {
 				</Medium2>
 
 				<Medium1>
-					<a href={this.props.videoLink}>Youtube</a>
+					<a href={this.props.videoLink} target="_blank">Youtube</a>
 				</Medium1>
 
 				<Medium1>
-					<a href={this.props.musicLink}>SoundCloud</a>
+					<a href={this.props.musicLink} target="_blank">SoundCloud</a>
 				</Medium1>
 
 				{this.state.edit ? 
@@ -105,6 +106,14 @@ class Song extends Component {
 			</ResponsiveContainer>
 		)
 	}
+}
+
+Song.propTypes = {
+	artist: PropTypes.string,
+	song: PropTypes.string,
+	genre: PropTypes.string,
+	musicLink: PropTypes.string,
+	videoLink: PropTypes.string
 }
 
 export default Song;

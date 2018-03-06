@@ -1,5 +1,5 @@
 {
-  "name": "playlists",
+  "name": "playlist",
   "version": "1.0.0",
   "description": "crud-app",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/berezovskycom/react-boilerplate.git"
+    "url": "git+https://github.com/berezovskycom/playlist.git"
   },
   "author": "berezovskycom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/berezovskycom/react-boilerplate/issues"
+    "url": "https://github.com/berezovskycom/playlist/issues"
   },
-  "homepage": "https://github.com/berezovskycom/react-boilerplate#readme",
+  "homepage": "https://github.com/berezovskycom/playlist#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
@@ -26,10 +26,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.10",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "jest": "^22.4.2",
     "node-sass": "^4.7.2",
