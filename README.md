@@ -11,4 +11,4 @@ React application for making a playlist of your favourite songs
 - Webpack
 - Jest
 
-[Link](little-heat.surge.sh)
+[Link](www.little-heat.surge.sh)
