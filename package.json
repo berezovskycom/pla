@@ -1,5 +1,5 @@
 {
-  "name": "playlist",
+  "name": "playlist-crud",
   "version": "1.0.0",
   "description": "crud-app",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/berezovskycom/playlist.git"
+    "url": "git+https://github.com/berezovskycom/playlist-crud.git"
   },
   "author": "berezovskycom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/berezovskycom/playlist/issues"
+    "url": "https://github.com/berezovskycom/playlist-crud/issues"
   },
-  "homepage": "https://github.com/berezovskycom/playlist#readme",
+  "homepage": "https://github.com/berezovskycom/playlist-crud#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
