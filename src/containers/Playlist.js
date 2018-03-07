@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addToList } from '../actions';
 import store from '../store';
-
+import { splitAndJoin, fetchInfo } from '../utils/getLinks';
 import { YOU_TUBE_LINK, SOUND_CLOUD_LINK } from '../constants';
 import { v4 } from 'uuid';
 
@@ -25,18 +25,6 @@ class Playlist extends Component {
 		this.state = {
 			addNewSong: false
 		}
-		this.splitAndJoin = this.splitAndJoin.bind(this);
-		this.fetchInfo = this.fetchInfo.bind(this);
-	}
-
-	splitAndJoin(str, sign) {
-	  return str.split(' ').join(sign);
-	}
-
-	fetchInfo(artist, sign = '+', song) {
-	  const fetchedInfo = this.splitAndJoin(artist, sign) + 
-	  sign + this.splitAndJoin(song, sign);
-	  return fetchedInfo.toLowerCase();
 	}
 
 	render() {
@@ -53,8 +41,8 @@ class Playlist extends Component {
 								artist={artist}
 								song={song}
 								genre={genre}
-								videoLink={YOU_TUBE_LINK + this.fetchInfo(artist, '+', song)}
-								musicLink={SOUND_CLOUD_LINK + this.fetchInfo(artist, '%20', song)}
+								videoLink={YOU_TUBE_LINK + fetchInfo(artist, '+', song)}
+								musicLink={SOUND_CLOUD_LINK + fetchInfo(artist, '%20', song)}
 							/>
 						})}
 				</div>

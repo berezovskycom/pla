@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 import reducer from '../reducers';
-import { loadState } from '../localStorage'
+import { loadState } from '../utils/localStorage'
 
 const persistedState = loadState();
 

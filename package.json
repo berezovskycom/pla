@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "jest",
+    "watch-test": "jest --watch",
     "build": "SET NODE_ENV=production npm run clean & webpack -p"
   },
   "repository": {

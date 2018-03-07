@@ -5,7 +5,7 @@ import store from '../store';
 import reducer from '../reducers';
 import { createStore } from 'redux';
 import App from '../components/App';
-import { loadState, saveState } from '../localStorage'
+import { loadState, saveState } from '../utils/localStorage'
 
 store.subscribe(() => {
 	saveState(store.getState());
